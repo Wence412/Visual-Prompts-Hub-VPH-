@@ -1,0 +1,101 @@
+# VPH Prompt Template — APAE v1
+# Copy this file and fill all required fields before submitting.
+# Required fields are marked [REQUIRED]. Optional fields are marked [OPTIONAL].
+
+# ─────────────────────────────────────────────
+# METADATA
+# ─────────────────────────────────────────────
+title: "[REQUIRED] Subject — Setting — Mood"    # Format: "Titanium Watch — Dark Studio — Premium"
+version: "1.0.0"                                 # Semantic version
+category: "[REQUIRED]"                           # products | fashion | portraits | architecture | abstract | branding
+engine_primary: "[REQUIRED]"                     # chatgpt_image_2 | midjourney | dalle3 | sdxl | firefly | ideogram
+tags: [OPTIONAL]                                 # e.g. [luxury, editorial, product, minimal]
+authors:                                         # [OPTIONAL]
+  - name: ""
+    github: ""
+
+# ─────────────────────────────────────────────
+# APAE FRAMEWORK
+# ─────────────────────────────────────────────
+apae:
+  appearance: "[REQUIRED] Subject noun + materials + finish + color. Be specific."
+  # Example: "matte titanium smartwatch, sapphire glass, brushed steel band"
+
+  place: "[REQUIRED] Environment or backdrop. Short, specific phrases."
+  # Example: "dark concrete studio with overhead spotlight"
+
+  action: "[REQUIRED] Pose, motion, arrangement, angle."
+  # Example: "floating at 30-degree angle, slight clockwise rotation"
+
+  emotion: "[REQUIRED] Mood and brand feeling. Short phrases."
+  # Example: "premium, minimal, futuristic, trust"
+
+# ─────────────────────────────────────────────
+# ENGINE PROMPTS
+# ─────────────────────────────────────────────
+chatgpt_image_2:
+  prompt: >
+    [REQUIRED] Write the full prompt string here. Combine APAE fields into a
+    coherent, descriptive paragraph. Include lighting, composition, and mood.
+  style_preset: "[OPTIONAL] product_photo | editorial | illustration | portrait | cinematic"
+  background: "[OPTIONAL] gradient | clean | cinematic | practical | environment | practical_with_props"
+  ar: "[OPTIONAL] 1:1 | 16:9 | 4:5 | 3:2"
+  quality: "[OPTIONAL] standard | hd"
+
+# Engine overrides — [OPTIONAL] Add only if targeting other engines
+engine_overrides:
+  midjourney:
+    prompt: >
+      [OPTIONAL] Midjourney-adapted version of the prompt.
+    flags: "--ar 3:2 --style raw --v 6 --q 2"
+
+  dalle3:
+    prompt: >
+      [OPTIONAL] DALL-E 3 verbatim prompt. Include explicit style direction.
+
+  sdxl:
+    prompt: >
+      [OPTIONAL] SDXL-adapted prompt.
+    cfg_scale: 7
+    steps: 30
+    sampler: "DPM++ 2M Karras"
+
+# ─────────────────────────────────────────────
+# NEGATIVES (Brand Safety)
+# ─────────────────────────────────────────────
+negatives:
+  - logos
+  - text
+  - watermark
+  # Add more as needed:
+  # - people
+  # - hands
+  # - blurry
+  # - low quality
+  # - distorted
+
+# ─────────────────────────────────────────────
+# VARIANTS (Minimum 2 required)
+# ─────────────────────────────────────────────
+variants:
+  - id: v1
+    label: "Light Studio"
+    change: "Replace place with white seamless studio. Change emotion to clean, minimal."
+    background: clean
+
+  - id: v2
+    label: "Lifestyle Context"
+    change: "Add practical_with_props background. Include contextual prop (e.g. coffee table, shelf)."
+    background: practical_with_props
+
+  # Add more variants:
+  # - id: v3
+  #   label: "Warm Tones"
+  #   change: "Shift color temperature to warm amber. Change lighting to golden hour."
+
+# ─────────────────────────────────────────────
+# METADATA
+# ─────────────────────────────────────────────
+license: MIT
+created: ""       # ISO 8601 date: YYYY-MM-DD
+updated: ""       # ISO 8601 date: YYYY-MM-DD

@@ -1,0 +1,76 @@
+title: "Titanium Smartwatch — Dark Concrete Studio — Premium"
+version: "1.0.0"
+category: products
+engine_primary: chatgpt_image_2
+tags: [luxury, smartwatch, wearable, minimal, dark]
+authors:
+  - name: WenceStudio by SmartDesign
+    github: Wence412
+
+apae:
+  appearance: "titanium smartwatch, matte charcoal case, sapphire glass face, brushed steel band with deployant clasp"
+  place: "dark concrete studio with a single overhead spotlight, smoke-effect background haze"
+  action: "floating at 30-degree angle, slight clockwise rotation, band curving naturally downward"
+  emotion: "premium, precise, futuristic, confident"
+
+chatgpt_image_2:
+  prompt: >
+    Titanium smartwatch with matte charcoal case, sapphire glass face, and brushed steel band
+    with deployant clasp. Floating at a 30-degree angle with slight clockwise rotation, band
+    curving naturally downward. Dark concrete studio setting with a single overhead spotlight
+    casting a sharp pool of light, smoke-effect background haze creating depth. Premium product
+    photography. Dramatic shadows. High-contrast lighting. Razor-sharp focus on the watch face.
+    Editorial quality. No reflections on face. Deep black background fading into smoke.
+  style_preset: product_photo
+  background: cinematic
+  ar: "1:1"
+  quality: hd
+
+engine_overrides:
+  midjourney:
+    prompt: >
+      Titanium smartwatch matte charcoal case sapphire glass floating at 30-degree angle,
+      dark concrete studio overhead spotlight smoke haze, premium product photography,
+      dramatic shadows high contrast, editorial quality --ar 1:1 --style raw --v 6 --q 2
+    flags: "--ar 1:1 --style raw --v 6 --q 2"
+  dalle3:
+    prompt: >
+      A premium titanium smartwatch with a matte charcoal case and sapphire glass face,
+      floating at a 30-degree angle inside a dark concrete studio. A single overhead spotlight
+      illuminates the watch face with dramatic precision. Deep shadows. Smoke-effect background.
+      Product photography quality. Sharp focus. No text or logos visible.
+
+negatives:
+  - logos
+  - text
+  - watermark
+  - fingerprints
+  - reflections on glass
+  - hands
+  - people
+  - blurry
+
+variants:
+  - id: v1
+    label: "White Studio"
+    change: "Replace dark concrete studio with white seamless background. Soft diffused lighting. Clean, minimal."
+    background: clean
+
+  - id: v2
+    label: "Lifestyle Desk"
+    change: "Place watch on a dark walnut desk surface alongside a leather notebook and fountain pen. Natural window light from left."
+    background: practical_with_props
+
+  - id: v3
+    label: "Gold Accent"
+    change: "Change case to rose gold finish. Warm amber accent lighting. Cream gradient background."
+    background: gradient
+
+  - id: v4
+    label: "Wrist Wear"
+    change: "Show watch worn on a wrist emerging from a dark suit sleeve. Close-crop. No face visible. Focus on the watch."
+    background: environment
+
+license: MIT
+created: "2026-05-30"
+updated: "2026-05-30"

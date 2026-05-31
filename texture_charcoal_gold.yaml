@@ -1,0 +1,70 @@
+title: "Charcoal and Gold Texture — Abstract Surface — Brand Identity"
+version: "1.0.0"
+category: abstract
+engine_primary: chatgpt_image_2
+tags: [abstract, texture, charcoal, gold, brand, identity, luxury]
+authors:
+  - name: WenceStudio by SmartDesign
+    github: Wence412
+
+apae:
+  appearance: "layered charcoal paper texture with gold leaf fragments embedded, irregular abstract surface, matte base with metallic accent"
+  place: "tight crop on the surface itself, no visible edges or context, pure texture"
+  action: "flat lay perspective, raking side light from left revealing surface depth and texture relief"
+  emotion: "luxury, editorial, brand identity, depth"
+
+chatgpt_image_2:
+  prompt: >
+    Layered charcoal paper texture with irregular gold leaf fragments embedded throughout
+    the surface. Matte charcoal base with metallic gold accent. Flat lay close-up perspective.
+    No visible edges or context, pure abstract texture filling the entire frame. Raking
+    side light from the left revealing surface depth, texture relief, and the contrast between
+    matte charcoal and reflective gold leaf. Abstract macro photography. Luxury brand
+    identity feel. Deep shadow in texture valleys.
+  style_preset: editorial
+  background: clean
+  ar: "1:1"
+  quality: hd
+
+engine_overrides:
+  midjourney:
+    prompt: >
+      Charcoal paper texture gold leaf fragments embedded, flat lay raking sidelight macro,
+      abstract luxury brand identity surface, matte base metallic accent --ar 1:1 --style raw --v 6
+    flags: "--ar 1:1 --style raw --v 6"
+  dalle3:
+    prompt: >
+      Abstract close-up of layered charcoal paper with embedded gold leaf fragments. Matte
+      charcoal base. Reflective gold accents. Flat lay view with raking side light from left
+      revealing surface texture and depth. No frame edges visible. Pure texture, full frame.
+      Luxury brand identity aesthetic. Macro photography quality. No text or logos.
+
+negatives:
+  - logos
+  - text
+  - watermark
+  - frame edges visible
+  - overexposed gold
+  - flat uniform surface
+  - blurry
+
+variants:
+  - id: v1
+    label: "Black and Silver"
+    change: "Replace gold leaf with silver leaf. Pure black base. High-contrast metallic cool tone version."
+
+  - id: v2
+    label: "Deep Burgundy"
+    change: "Replace charcoal with deep burgundy handmade paper. Gold leaf retained. Warm, rich palette."
+
+  - id: v3
+    label: "Blueprint Texture"
+    change: "Navy blueprint paper base with white ink line fragments and pale gold. Cool editorial academic tone."
+
+  - id: v4
+    label: "Marble and Brass"
+    change: "White Carrara marble surface with brass powder dusting in crevices. Overhead raking light. Architectural luxury."
+
+license: MIT
+created: "2026-05-30"
+updated: "2026-05-30"

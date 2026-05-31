@@ -1,0 +1,77 @@
+title: "Structured Leather Jacket — Industrial Backdrop — Editorial"
+version: "1.0.0"
+category: fashion
+engine_primary: chatgpt_image_2
+tags: [fashion, leather, editorial, contrast, industrial]
+authors:
+  - name: WenceStudio by SmartDesign
+    github: Wence412
+
+apae:
+  appearance: "structured black leather moto jacket, wide lapels, minimal hardware, clean seaming, raw hem"
+  place: "industrial concrete corridor, ambient backlighting through far window, single side spotlight"
+  action: "worn on a mannequin form, angled 45 degrees, collar up, sleeves pushed mid-forearm"
+  emotion: "raw, authoritative, editorial, directional"
+
+chatgpt_image_2:
+  prompt: >
+    Structured black leather moto jacket with wide lapels, minimal hardware, clean seaming,
+    and raw hem. Worn on a tailored mannequin form angled 45 degrees, collar up, sleeves
+    pushed to mid-forearm. Industrial concrete corridor setting with ambient backlighting
+    through a far window creating a silhouette edge, single side spotlight from left for
+    detail definition. High-contrast editorial fashion photography. Deep blacks, sharp
+    leather texture. Moody and directional. No distracting background elements.
+  style_preset: editorial
+  background: cinematic
+  ar: "4:5"
+  quality: hd
+
+engine_overrides:
+  midjourney:
+    prompt: >
+      Structured black leather moto jacket mannequin 45 degree angle, industrial concrete corridor
+      backlight side spotlight, editorial fashion photography high contrast, moody directional
+      --ar 4:5 --style raw --v 6 --q 2
+    flags: "--ar 4:5 --style raw --v 6 --q 2"
+  dalle3:
+    prompt: >
+      A structured black leather moto jacket on a tailored mannequin, angled 45 degrees
+      with collar up and sleeves pushed mid-forearm. Set inside an industrial concrete corridor
+      with ambient backlighting through a far window and a single spotlight from the left.
+      High-contrast editorial fashion photography. Sharp leather texture. Deep dramatic shadows.
+      No text, logos, or people visible.
+
+negatives:
+  - logos
+  - text
+  - watermark
+  - faces
+  - hands visible
+  - bright colors
+  - blurry
+  - wrinkled background
+
+variants:
+  - id: v1
+    label: "White Studio Clean"
+    change: "Move to white seamless studio. Soft box lighting. Clean, commercial fashion feel. Jacket detail focus."
+    background: clean
+
+  - id: v2
+    label: "Outdoor Urban"
+    change: "Place jacket on a figure against a rain-wet urban street. Night setting. Streetlight bokeh background."
+    background: environment
+
+  - id: v3
+    label: "Flat Lay"
+    change: "Jacket laid flat on a brushed concrete surface. Overhead shot. Accessories arranged neatly alongside."
+    background: practical
+
+  - id: v4
+    label: "Warm Season"
+    change: "Same jacket in warm amber sunset light. Outdoor rooftop. Relaxed collar. Sleeves unrolled."
+    background: environment
+
+license: MIT
+created: "2026-05-30"
+updated: "2026-05-30"

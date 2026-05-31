@@ -1,0 +1,94 @@
+# VPH Brand Pack Template
+# Use this template to produce a full visual suite for a single brand or product line.
+# A brand pack = 1 hero + 1 editorial + 1 lifestyle + 1 abstract/texture.
+
+brand_pack:
+  name: "[REQUIRED] Brand or product line name"
+  tagline: "[OPTIONAL] One-line brand positioning statement"
+  version: "1.0.0"
+  category: products | fashion | branding   # pick one
+  engine_primary: chatgpt_image_2
+
+  # Brand visual identity — drives consistency across all four shots
+  visual_identity:
+    primary_colors: []       # e.g. [deep black, gold, ivory]
+    secondary_colors: []     # e.g. [charcoal, warm white]
+    finish: ""               # e.g. matte | glossy | brushed | raw
+    mood_keywords: []        # e.g. [premium, editorial, architectural, minimal]
+    forbidden_elements: []   # e.g. [bright colors, cartoonish, playful, pastels]
+
+  # ─────────────────────────────────────────────
+  # SHOT 1: Hero Product Shot
+  # Purpose: Primary brand asset. Clean, precise, premium.
+  # ─────────────────────────────────────────────
+  hero:
+    apae:
+      appearance: ""   # Primary product. Maximum detail.
+      place: ""        # Clean or gradient studio.
+      action: ""       # Product centered, slight angle.
+      emotion: ""      # Brand's primary feeling.
+    chatgpt_image_2:
+      prompt: >
+        [Hero prompt here]
+      style_preset: product_photo
+      background: gradient | clean
+      ar: "1:1"
+    negatives: [logos, text, watermark, people, hands, blurry]
+
+  # ─────────────────────────────────────────────
+  # SHOT 2: Editorial / Campaign
+  # Purpose: Magazine-quality. Tells a story.
+  # ─────────────────────────────────────────────
+  editorial:
+    apae:
+      appearance: ""   # Same product. Include editorial context.
+      place: ""        # More evocative environment.
+      action: ""       # More dynamic arrangement.
+      emotion: ""      # Aspirational, campaign-level feeling.
+    chatgpt_image_2:
+      prompt: >
+        [Editorial prompt here]
+      style_preset: editorial
+      background: cinematic | environment
+      ar: "16:9"
+    negatives: [logos, text, watermark, blurry]
+
+  # ─────────────────────────────────────────────
+  # SHOT 3: Lifestyle / Context
+  # Purpose: Shows product in use or natural environment.
+  # ─────────────────────────────────────────────
+  lifestyle:
+    apae:
+      appearance: ""   # Product + contextual prop or environment.
+      place: ""        # Real-world or styled lifestyle set.
+      action: ""       # In use or naturally placed.
+      emotion: ""      # Relatable, aspirational.
+    chatgpt_image_2:
+      prompt: >
+        [Lifestyle prompt here]
+      style_preset: editorial
+      background: practical_with_props | environment
+      ar: "4:5"
+    negatives: [logos, text, watermark, blurry, distorted]
+
+  # ─────────────────────────────────────────────
+  # SHOT 4: Abstract / Texture / Detail
+  # Purpose: Material story. Brand texture. Macro detail.
+  # ─────────────────────────────────────────────
+  abstract:
+    apae:
+      appearance: ""   # Close-up surface detail or material texture.
+      place: ""        # Neutral or contextual backdrop.
+      action: ""       # Macro view, slight depth of field.
+      emotion: ""      # Craft, precision, quality.
+    chatgpt_image_2:
+      prompt: >
+        [Abstract/detail prompt here]
+      style_preset: product_photo
+      background: clean | gradient
+      ar: "1:1"
+    negatives: [logos, text, watermark, full product visible, blurry]
+
+license: MIT
+created: ""
+updated: ""

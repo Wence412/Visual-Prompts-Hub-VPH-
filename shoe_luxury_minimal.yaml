@@ -1,0 +1,67 @@
+title: "Chelsea Boot — Gradient Studio — Luxury Minimal"
+version: "1.0.0"
+category: fashion
+engine_primary: chatgpt_image_2
+tags: [fashion, footwear, boot, luxury, minimal, gradient]
+authors:
+  - name: WenceStudio by SmartDesign
+    github: Wence412
+
+apae:
+  appearance: "hand-stitched black leather Chelsea boot, elasticated side panels, leather sole, burnished toe cap"
+  place: "smooth gradient studio, deep charcoal to black sweep, single overhead key light"
+  action: "boot standing upright on a low dark plinth, angled 30 degrees, subtle shadow cast on sweep"
+  emotion: "understated, classic, premium, craft"
+
+chatgpt_image_2:
+  prompt: >
+    Hand-stitched black leather Chelsea boot with elasticated side panels, leather sole,
+    and burnished toe cap. Standing upright on a low dark plinth, angled 30 degrees.
+    Smooth studio gradient from deep charcoal to black beneath the boot. Single overhead
+    key light illuminating the toe cap and hand-stitching in sharp detail. Subtle soft
+    shadow cast on the gradient sweep. Luxury footwear product photography. Rich leather
+    texture visible. Understated. Precise. No distractions.
+  style_preset: product_photo
+  background: gradient
+  ar: "4:5"
+  quality: hd
+
+engine_overrides:
+  midjourney:
+    prompt: >
+      Black leather Chelsea boot plinth dark gradient studio, overhead spotlight burnished toe,
+      luxury footwear product photography, hand-stitching visible, understated premium
+      --ar 4:5 --style raw --v 6
+    flags: "--ar 4:5 --style raw --v 6"
+
+negatives:
+  - logos
+  - text
+  - watermark
+  - shoelaces visible on wrong shoe type
+  - dirty sole
+  - blurry
+  - distracting background
+
+variants:
+  - id: v1
+    label: "Pair Shot"
+    change: "Show a pair of boots side by side, slight angular spread. Symmetric composition. Same lighting."
+
+  - id: v2
+    label: "Lifestyle Street"
+    change: "Boot worn on foot against rain-slicked cobblestone. Overhead rain. Urban evening. Warm streetlight."
+    background: environment
+
+  - id: v3
+    label: "Detail Macro"
+    change: "Extreme close-up on the elasticated panel and hand-stitching. Macro lens feel. Depth of field. Texture focus."
+
+  - id: v4
+    label: "White Clean"
+    change: "White seamless background. Soft diffused box lighting. Clean commercial catalog feel."
+    background: clean
+
+license: MIT
+created: "2026-05-30"
+updated: "2026-05-30"

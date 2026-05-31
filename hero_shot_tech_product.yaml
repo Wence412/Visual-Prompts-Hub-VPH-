@@ -1,0 +1,77 @@
+title: "Premium Tech Device — Dark Editorial — Brand Hero"
+version: "1.0.0"
+category: branding
+engine_primary: chatgpt_image_2
+tags: [branding, tech, hero, editorial, dark, premium]
+authors:
+  - name: WenceStudio by SmartDesign
+    github: Wence412
+
+apae:
+  appearance: "slim matte black wireless earbuds in their charging case, soft-touch finish, no visible branding"
+  place: "dark obsidian surface, deep shadow background, single beam spotlight from upper right"
+  action: "case open at 45 degrees, one earbud resting beside it, angled composition, rule of thirds"
+  emotion: "precision, quiet confidence, premium audio, focused"
+
+chatgpt_image_2:
+  prompt: >
+    Slim matte black wireless earbuds in their open charging case, soft-touch finish,
+    no visible branding. One earbud resting beside the case on a dark obsidian surface.
+    Case angled open at 45 degrees. Composition following rule of thirds. Single beam
+    spotlight from upper right cutting through deep shadow background. Premium tech
+    product photography. Sharp focus on both the case hinge and the earbud driver.
+    Deep blacks. Minimal reflection. Cinematic mood. No clutter.
+  style_preset: product_photo
+  background: cinematic
+  ar: "16:9"
+  quality: hd
+
+engine_overrides:
+  midjourney:
+    prompt: >
+      Matte black wireless earbuds open case obsidian surface, single spotlight upper right,
+      one earbud beside, rule of thirds, premium tech product photography, cinematic deep shadow
+      --ar 16:9 --style raw --v 6 --q 2
+    flags: "--ar 16:9 --style raw --v 6 --q 2"
+  dalle3:
+    prompt: >
+      Premium matte black wireless earbuds in an open charging case on a dark obsidian surface.
+      One earbud rests beside the case. Case is open at 45 degrees. Single beam spotlight from
+      upper right. Deep shadows. Cinematic product photography. Sharp detail on hinge and driver.
+      No logos, text, or branding visible.
+
+negatives:
+  - logos
+  - text
+  - brand names
+  - watermark
+  - bright colors
+  - cable visible
+  - blurry
+  - overexposed highlights
+  - messy composition
+
+variants:
+  - id: v1
+    label: "White Clean Launch"
+    change: "White seamless backdrop. Soft overhead diffusion. Clinical, Apple-style clean product shot."
+    background: clean
+
+  - id: v2
+    label: "Lifestyle Usage"
+    change: "Earbuds worn by an ear (no face). Close crop. Natural indoor window light. Casual context."
+    background: environment
+
+  - id: v3
+    label: "Gradient Announcement"
+    change: "Navy-to-black gradient. Earbuds centered, case closed beside. Hero announcement framing."
+    background: gradient
+
+  - id: v4
+    label: "Flat Lay Social"
+    change: "Overhead flat lay on textured dark fabric. Both earbuds in case. Minimal props: cable, box."
+    background: practical_with_props
+
+license: MIT
+created: "2026-05-30"
+updated: "2026-05-30"

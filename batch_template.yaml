@@ -1,0 +1,55 @@
+# VPH Batch Template
+# Use this template to define multiple prompts in a single file for batch generation.
+# Useful for: content calendars, campaign sets, A/B testing variants.
+
+batch:
+  name: "[REQUIRED] Batch name"
+  description: "[OPTIONAL] What this batch is for"
+  engine: chatgpt_image_2    # Target engine for all prompts in this batch
+  version: "1.0.0"
+  created: ""
+
+  # Shared settings applied to all prompts unless overridden at prompt level
+  shared_settings:
+    style_preset: product_photo
+    ar: "1:1"
+    negatives: [logos, text, watermark]
+
+  # List of prompts in this batch
+  prompts:
+    - id: "001"
+      title: "[Prompt 1 title]"
+      apae:
+        appearance: ""
+        place: ""
+        action: ""
+        emotion: ""
+      prompt: >
+        [Full prompt string for prompt 1]
+      # Override shared settings if needed:
+      # style_preset: editorial
+      # ar: "16:9"
+
+    - id: "002"
+      title: "[Prompt 2 title]"
+      apae:
+        appearance: ""
+        place: ""
+        action: ""
+        emotion: ""
+      prompt: >
+        [Full prompt string for prompt 2]
+
+    - id: "003"
+      title: "[Prompt 3 title]"
+      apae:
+        appearance: ""
+        place: ""
+        action: ""
+        emotion: ""
+      prompt: >
+        [Full prompt string for prompt 3]
+
+    # Add more prompts following the same pattern.
+
+license: MIT

@@ -1,0 +1,74 @@
+# VPH Campaign Template
+# Use this for a full campaign: hero, social, editorial, and supporting assets.
+# Maps to a real product launch or content campaign cycle.
+
+campaign:
+  name: "[REQUIRED] Campaign name"
+  product: "[REQUIRED] Product or subject"
+  season: ""               # e.g. SS26, FW25, Q2 2026
+  engine_primary: chatgpt_image_2
+  version: "1.0.0"
+  created: ""
+
+  brand_context:
+    colors: []
+    mood: []
+    style_direction: ""    # e.g. "Dark editorial. Luxury. Zero noise."
+
+  # ─── LAUNCH HERO ──────────────────────────────
+  # The single most important image. Defines the campaign aesthetic.
+  launch_hero:
+    format: "1:1"
+    apae:
+      appearance: ""
+      place: ""
+      action: ""
+      emotion: ""
+    prompt: >
+      [Launch hero prompt]
+    negatives: [logos, text, watermark, people, hands]
+
+  # ─── SOCIAL FORMATS ───────────────────────────
+  # Same subject, adapted for social platform aspect ratios.
+  social:
+    instagram_feed:
+      format: "4:5"
+      prompt: >
+        [Instagram feed prompt — same subject, slightly more lifestyle feel]
+
+    instagram_story:
+      format: "9:16"
+      prompt: >
+        [Story/vertical format prompt]
+
+    linkedin_banner:
+      format: "16:9"
+      prompt: >
+        [LinkedIn banner — wider, more negative space on one side for text overlay]
+
+  # ─── EDITORIAL ────────────────────────────────
+  # Magazine-quality. Used in newsletters, press, longform content.
+  editorial:
+    format: "16:9"
+    prompt: >
+      [Editorial prompt — more environment, more story, cinematic quality]
+    negatives: [logos, text, watermark]
+
+  # ─── DETAIL / TEXTURE ─────────────────────────
+  # Material close-up. Brand texture shot.
+  detail:
+    format: "1:1"
+    prompt: >
+      [Macro detail prompt — surface texture, material quality]
+    negatives: [logos, text, watermark, full product]
+
+  # ─── VARIANTS ─────────────────────────────────
+  variants:
+    - label: "Day version"
+      change: "Shift lighting to bright natural light. Clean white studio."
+    - label: "Night version"
+      change: "Dark studio. Deep shadows. Warm accent light."
+    - label: "Seasonal"
+      change: "Add seasonal environmental context (snow / summer heat / autumn leaves)."
+
+license: MIT

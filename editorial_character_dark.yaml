@@ -1,0 +1,76 @@
+title: "Editorial Portrait — Dark Studio — Character Study"
+version: "1.0.0"
+category: portraits
+engine_primary: chatgpt_image_2
+tags: [portrait, editorial, character, dark, cinematic, studio]
+authors:
+  - name: WenceStudio by SmartDesign
+    github: Wence412
+
+apae:
+  appearance: "fictional character, ambiguous gender, sharp angular features, textured dark clothing, no visible branding"
+  place: "dark studio with split lighting setup, one side lit, one side in deep shadow"
+  action: "three-quarter turn toward camera, chin slightly lowered, direct eye contact, hands not visible"
+  emotion: "intense, composed, authority, quiet power"
+
+chatgpt_image_2:
+  prompt: >
+    Editorial portrait of a fictional character with ambiguous gender presentation, sharp angular
+    facial features, and textured dark clothing with no visible branding. Three-quarter turn
+    toward camera, chin slightly lowered, direct eye contact. Dark studio with split lighting,
+    one side of the face lit with a hard key light, the opposite side falling into deep shadow.
+    Rembrandt lighting triangle on the shadow side. Magazine editorial photography. Skin texture
+    visible. Intense, composed expression. Quiet authority. No softening filters.
+  style_preset: editorial
+  background: cinematic
+  ar: "4:5"
+  quality: hd
+
+engine_overrides:
+  midjourney:
+    prompt: >
+      Editorial portrait fictional character angular features dark textured clothing, dark studio
+      split lighting hard key light deep shadow, three-quarter turn direct eye contact, Rembrandt
+      lighting, magazine photography --ar 4:5 --style raw --v 6
+    flags: "--ar 4:5 --style raw --v 6"
+  dalle3:
+    prompt: >
+      A magazine editorial portrait of a fictional character with sharp angular features and
+      textured dark clothing. Three-quarter turn, chin slightly lowered, direct eye contact.
+      Dark studio with split lighting. Hard key light on one side, deep shadow on the other.
+      Rembrandt triangle on shadow side. Intense, composed expression. No logos, text, or
+      branding visible.
+
+negatives:
+  - logos
+  - text
+  - watermark
+  - soft beauty filters
+  - identifiable real person
+  - hands visible
+  - distracting background
+  - bright colors
+
+variants:
+  - id: v1
+    label: "High Key White"
+    change: "White seamless background. Bright overcast studio light. Same character, same expression. Starkly different mood."
+    background: clean
+
+  - id: v2
+    label: "Environmental"
+    change: "Character placed in an industrial corridor. Ambient light from far end. Walking toward camera. Motion blur on feet."
+    background: environment
+
+  - id: v3
+    label: "Profile Study"
+    change: "Pure profile shot. Full side on. Single harsh side light. Shadow-to-face. No eye contact. Sculptural."
+
+  - id: v4
+    label: "Warm Editorial"
+    change: "Warm amber light source from window. Golden hour interior. Same dark clothing. Warm-cool contrast on face."
+    background: environment
+
+license: MIT
+created: "2026-05-30"
+updated: "2026-05-30"

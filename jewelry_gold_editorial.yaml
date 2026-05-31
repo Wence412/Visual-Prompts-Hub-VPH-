@@ -1,0 +1,69 @@
+title: "18K Gold Ring — Marble Plinth — Sculptural"
+version: "1.0.0"
+category: products
+engine_primary: chatgpt_image_2
+tags: [jewelry, gold, editorial, luxury, sculptural]
+authors:
+  - name: WenceStudio by SmartDesign
+    github: Wence412
+
+apae:
+  appearance: "18K gold signet ring, hand-hammered surface texture, wide band, matte interior, polished exterior edges"
+  place: "white Carrara marble plinth, studio environment, seamless white paper backdrop"
+  action: "ring standing upright on its band, centered on the plinth, slight 15-degree tilt toward camera"
+  emotion: "architectural, heirloom, confident, timeless"
+
+chatgpt_image_2:
+  prompt: >
+    18K gold signet ring with hand-hammered surface texture, wide band, matte interior,
+    and polished exterior edges. Standing upright on its band, centered on a white Carrara
+    marble plinth, slight 15-degree tilt toward camera. White seamless paper backdrop.
+    Soft diffused overhead lighting with a single rim light on the right edge. Jewelry
+    product photography. Macro clarity on surface texture. Clean, architectural composition.
+    No reflections obscuring the hammered surface.
+  style_preset: product_photo
+  background: practical
+  ar: "1:1"
+  quality: hd
+
+engine_overrides:
+  midjourney:
+    prompt: >
+      18K gold signet ring hammered texture wide band, marble plinth white studio, standing upright
+      15-degree tilt, jewelry product photography, soft overhead rim light, macro detail --ar 1:1 --style raw --v 6
+    flags: "--ar 1:1 --style raw --v 6"
+  dalle3:
+    prompt: >
+      A gold signet ring with a hand-hammered surface texture stands upright on a white Carrara
+      marble plinth. The ring is centered with a slight forward tilt. White seamless backdrop.
+      Soft diffused overhead lighting with a rim light on the right. Close-up jewelry photography
+      showing full surface detail. No text or logos.
+
+negatives:
+  - logos
+  - text
+  - watermark
+  - hands
+  - fingers
+  - blurry
+  - overexposed highlights
+
+variants:
+  - id: v1
+    label: "Dark Contrast"
+    change: "Replace marble plinth with black slate. Dark studio backdrop. Single spotlight from above right. Dramatic shadow."
+    background: cinematic
+
+  - id: v2
+    label: "Multiple Rings"
+    change: "Group of three rings at different angles. Varied distance from camera. Shallow depth of field, front ring in sharp focus."
+    background: practical
+
+  - id: v3
+    label: "Lifestyle — Flat Lay"
+    change: "Ring laid flat on aged linen fabric alongside dried botanicals and a wax seal. Overhead flat lay. Natural light."
+    background: practical_with_props
+
+license: MIT
+created: "2026-05-30"
+updated: "2026-05-30"

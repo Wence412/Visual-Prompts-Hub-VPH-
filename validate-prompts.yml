@@ -1,0 +1,113 @@
+name: Validate Prompt YAML Files
+
+on:
+  pull_request:
+    paths:
+      - 'prompt_library/**/*.yaml'
+      - 'templates/**/*.yaml'
+      - 'variants/**/*.yaml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'prompt_library/**/*.yaml'
+      - 'templates/**/*.yaml'
+
+jobs:
+  validate:
+    name: Schema Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml jsonschema
+
+      - name: Run YAML syntax check
+        run: |
+          python -c "
+          import yaml
+          import sys
+          import pathlib
+
+          errors = []
+          files = list(pathlib.Path('prompt_library').rglob('*.yaml'))
+          files += list(pathlib.Path('templates').rglob('*.yaml'))
+
+          for f in files:
+              try:
+                  with open(f) as fp:
+                      yaml.safe_load(fp)
+                  print(f'OK: {f}')
+              except yaml.YAMLError as e:
+                  errors.append(f'FAIL: {f} — {e}')
+
+          if errors:
+              for err in errors:
+                  print(err)
+              sys.exit(1)
+          else:
+              print(f'All {len(files)} files passed YAML syntax check.')
+          "
+
+      - name: Check required APAE fields
+        run: |
+          python -c "
+          import yaml
+          import sys
+          import pathlib
+
+          REQUIRED_KEYS = ['title', 'version', 'category', 'engine_primary', 'apae', 'negatives', 'variants']
+          REQUIRED_APAE = ['appearance', 'place', 'action', 'emotion']
+          REQUIRED_NEGATIVES = ['logos', 'text', 'watermark']
+
+          errors = []
+          files = list(pathlib.Path('prompt_library').rglob('*.yaml'))
+
+          for f in files:
+              with open(f) as fp:
+                  data = yaml.safe_load(fp)
+
+              if not data:
+                  continue
+
+              for key in REQUIRED_KEYS:
+                  if key not in data:
+                      errors.append(f'FAIL: {f} — Missing required key: {key}')
+
+              if 'apae' in data and data['apae']:
+                  for apae_key in REQUIRED_APAE:
+                      if apae_key not in data['apae']:
+                          errors.append(f'FAIL: {f} — Missing APAE field: {apae_key}')
+
+              if 'negatives' in data and isinstance(data['negatives'], list):
+                  for neg in REQUIRED_NEGATIVES:
+                      if neg not in data['negatives']:
+                          errors.append(f'WARN: {f} — Missing recommended negative: {neg}')
+
+              if 'variants' in data:
+                  if not isinstance(data['variants'], list) or len(data['variants']) < 2:
+                      errors.append(f'FAIL: {f} — Must have at least 2 variants')
+
+          if errors:
+              for err in errors:
+                  print(err)
+              # Exit with error only on FAIL (not WARN)
+              if any(e.startswith('FAIL') for e in errors):
+                  sys.exit(1)
+          else:
+              print(f'All {len(files)} prompt files passed field validation.')
+          "
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "Validation complete. See above for results."

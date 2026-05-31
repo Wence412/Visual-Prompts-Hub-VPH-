@@ -1,0 +1,75 @@
+title: "Brutalist Concrete Facade — Dusk — Architectural"
+version: "1.0.0"
+category: architecture
+engine_primary: chatgpt_image_2
+tags: [architecture, brutalist, concrete, dusk, editorial, urban]
+authors:
+  - name: WenceStudio by SmartDesign
+    github: Wence412
+
+apae:
+  appearance: "board-formed concrete facade, deep vertical reveals, recessed windows with dark interior glass, raw material honesty"
+  place: "urban streetscape at dusk, warm amber sky fading to deep blue zenith, wet pavement reflecting facade"
+  action: "wide shot looking up at three-quarter angle, facade filling left two-thirds of frame, open sky right"
+  emotion: "monumental, quiet power, permanence, raw beauty"
+
+chatgpt_image_2:
+  prompt: >
+    Board-formed concrete facade with deep vertical reveals and recessed windows with dark
+    interior glass. Wide shot looking up at three-quarter angle, facade filling the left
+    two-thirds of frame, open sky on the right. Urban streetscape at dusk. Warm amber sky
+    at horizon fading to deep blue at zenith. Wet pavement below reflecting the facade
+    and sky. Architectural photography. Sharp concrete texture visible in the reveals.
+    Long exposure quality. Moody, monumental. No people. No vehicles.
+  style_preset: editorial
+  background: environment
+  ar: "3:2"
+  quality: hd
+
+engine_overrides:
+  midjourney:
+    prompt: >
+      Brutalist concrete facade board-formed vertical reveals, urban dusk amber sky wet pavement,
+      three-quarter upward angle, architectural photography monumental quiet power
+      --ar 3:2 --style raw --v 6 --q 2
+    flags: "--ar 3:2 --style raw --v 6 --q 2"
+  dalle3:
+    prompt: >
+      A brutalist concrete building facade with board-formed texture and deep vertical reveals.
+      Photographed at dusk from a three-quarter upward angle. Warm amber sky transitions to
+      deep blue. Wet pavement reflects the building. Architectural photography. Sharp concrete
+      detail. Monumental and quiet. No people, vehicles, or signs visible.
+
+negatives:
+  - people
+  - vehicles
+  - signage
+  - logos
+  - text
+  - watermark
+  - blurry
+  - overexposed sky
+
+variants:
+  - id: v1
+    label: "Night — Interior Light"
+    change: "Night shot. Interior lights glowing through windows. Contrast between lit interior and dark exterior. Long exposure."
+    background: environment
+
+  - id: v2
+    label: "Detail — Texture Macro"
+    change: "Extreme close-up on the board-formed concrete surface. Shadows in the reveals. Macro texture quality."
+
+  - id: v3
+    label: "Overcast Day"
+    change: "Overcast flat gray sky. Diffused light revealing full concrete texture without harsh shadows. Documentary quality."
+    background: environment
+
+  - id: v4
+    label: "Interior Courtyard"
+    change: "Interior courtyard view looking up. Concrete walls four sides. Single point of sky above. Geometric composition."
+    background: environment
+
+license: MIT
+created: "2026-05-30"
+updated: "2026-05-30"
