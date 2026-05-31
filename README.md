@@ -183,4 +183,4 @@ MIT. See [LICENSE](LICENSE).
 
 ---
 
-*Built by [WenceStudio by SmartDesign](https://github.com/Wence412). Prompt systems that scale.*
+*Built [WenceStudio by SmartDesign](https://github.com/Wence412). Prompt systems that scale.*
