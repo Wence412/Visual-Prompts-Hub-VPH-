@@ -124,7 +124,7 @@ For a full campaign suite, combine all four:
 | Banner | Wide editorial, soft light, negative space | 16:9 |
 | Detail | Macro close-up, raking light | 1:1 |
 
-This five-shot suite covers every major platform from a single APAE prompt source. Use `templates/campaign_template.yaml` to structure this workflow.
+This five-shot suite covers every major platform from a single APAE prompt source. Use `campaign_template.yaml` to structure this workflow.
 
 ---
 

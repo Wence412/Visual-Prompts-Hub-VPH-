@@ -23,7 +23,7 @@ List all new or modified files:
 
 ```
 prompt_library/[category]/new_file.yaml
-templates/...
+...
 docs/...
 ```
 
@@ -48,7 +48,7 @@ docs/...
 - [ ] All prompts have minimum 2 variants
 - [ ] File names follow `subject_setting_mood.yaml` convention
 - [ ] No copyrighted characters, logos, or real people in prompt content
-- [ ] Engine flags match the engine's actual syntax (see `engines/engine_comparison.md`)
+- [ ] Engine flags match the engine's actual syntax (see `engine_comparison.md`)
 - [ ] README Featured Packs table updated (if adding a new category or pack)
 - [ ] CHANGELOG.md updated with a brief entry under `[Unreleased]`
 
@@ -58,7 +58,7 @@ docs/...
 
 Which engine(s) did you test these prompts on?
 
-- [ ] ChatGPT Image 2.0
+- [ ] your selected image tool
 - [ ] Midjourney
 - [ ] DALL-E 3
 - [ ] SDXL

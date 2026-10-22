@@ -1,6 +1,6 @@
 # Contributing to Visual Prompts Hub (VPH)
 
-Thank you for contributing. VPH is a structured prompt system — quality and consistency matter more than volume. Read this before opening a PR.
+Thank you for contributing. VPH is a structured prompt system , quality and consistency matter more than volume. Read this before opening a PR.
 
 ---
 
@@ -16,7 +16,7 @@ Thank you for contributing. VPH is a structured prompt system — quality and co
 
 - Prompts containing copyrighted characters, logos, or trademarked designs without rights
 - Prompts that generate explicit, violent, or harmful content
-- YAML files that do not validate against `prompt_system/prompt_schema.md`
+- YAML files that do not validate against `prompt_schema.md`
 - Prompts with no negatives array (brand-safety is required)
 - Single prompts submitted without at least 2 variants
 
@@ -27,7 +27,7 @@ Thank you for contributing. VPH is a structured prompt system — quality and co
 Every prompt YAML file must include these fields:
 
 ```yaml
-title: string                  # Required. Descriptive. Format: "Subject — Setting"
+title: string                  # Required. Descriptive. Format: "Subject , Setting"
 version: string                # Required. Semantic version, e.g. "1.0.0"
 category: string               # Required. products | fashion | portraits | architecture | abstract | branding
 engine_primary: string         # Required. chatgpt_image_2 | midjourney | dalle3 | sdxl | firefly | ideogram
@@ -71,7 +71,7 @@ Examples:
 - `jacket_editorial_contrast.yaml`
 - `facade_brutalist_dusk.yaml`
 
-**Folders:** New categories go under `prompt_library/[category]/`. New product packs go under `prompt_library/products/[pack_name]/`.
+Keep examples at the repository root so existing imports continue to resolve their source URLs. Use the categories listed in [prompt_schema.md](prompt_schema.md).
 
 ---
 
@@ -86,9 +86,9 @@ Examples:
 
 3. If adding a new category, update the `README.md` Featured Prompt Packs table.
 
-4. Run local validation (if available):
+4. Install `requirements-dev.txt`, then run local validation:
    ```bash
-   python docs/validate_schema.py prompt_library/your-new-file.yaml
+   python scripts/validate_prompts.py
    ```
 
 5. Fill out the PR template completely. PRs with empty templates will be closed without review.
@@ -115,4 +115,4 @@ Maintainers review against these criteria:
 
 ## Questions
 
-Open a [Discussion](https://github.com/Wence412/Visual-Prompts-Hub-VPH-/discussions) rather than an issue for general questions about the APAE system or prompt strategy.
+Open an [issue](https://github.com/Wence412/Visual-Prompts-Hub-VPH-/issues) rather than an issue for general questions about the APAE system or prompt strategy.

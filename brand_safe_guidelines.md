@@ -86,6 +86,6 @@ If a prompt in this repo generates output that includes real trademarks, logos, 
 
 ## Note on Engine Behavior
 
-Some engines (particularly DALL-E 3 and ChatGPT Image 2.0) have internal safety filters that further reduce trademark generation. These filters are not a substitute for writing brand-safe prompts. Write safe prompts first. Rely on engine filters second.
+Some engines (particularly DALL-E 3 and your selected image tool) have internal safety filters that further reduce trademark generation. These filters are not a substitute for writing brand-safe prompts. Write safe prompts first. Rely on engine filters second.
 
 VPH is designed for commercial and editorial use cases. Every prompt in this library must be safe for commercial use with no IP risk.

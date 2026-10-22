@@ -8,7 +8,7 @@ This end-to-end example walks through how the VPH system produces a production-r
 
 **Client need:** A hero product shot for a luxury smartwatch campaign. Dark, editorial, premium. Used as a newsletter hero and LinkedIn banner.
 
-**Engine:** ChatGPT Image 2.0 (primary), Midjourney (variant)
+**Engine:** your selected image tool (primary), Midjourney (variant)
 
 ---
 
@@ -80,7 +80,7 @@ Note: `reflections on glass` and `fingerprints` are product-specific negatives t
 
 ## Step 5: Run and Evaluate
 
-Paste the `chatgpt_image_2.prompt` string into ChatGPT Image 2.0.
+Paste the `chatgpt_image_2.prompt` string into your selected image tool.
 
 **Evaluation checklist:**
 - [ ] Matte charcoal case visible (not glossy)
@@ -122,7 +122,7 @@ The base prompt serves the 1:1 hero. For the LinkedIn 16:9 banner:
   ar: "16:9"
 ```
 
-This is a Format Variant (Strategy 4 in `variants/variant_strategies.md`).
+This is a Format Variant (Strategy 4 in `variant_strategies.md`).
 
 ---
 
@@ -130,5 +130,5 @@ This is a Format Variant (Strategy 4 in `variants/variant_strategies.md`).
 
 The full production-ready YAML file is at:
 ```
-prompt_library/products/wearable_pack/watch_dark_studio_premium.yaml
+watch_dark_studio_premium.yaml
 ```

@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-22. Repository repair
+
+- Replaced the proposed directory map and unavailable pack counts with links to eight actual examples and four templates.
+- Added a file contract and executable validator, activated CI and GitHub contribution templates.
+- Clarified historical engine settings, output review, and imported-library sync limits.
+- Kept root YAML paths and legacy engine keys compatible with existing importers.
+
+Earlier entries below describe the original release plan. Some listed paths were not present in the repository at review time.
+
+
+
 All notable changes to Visual Prompts Hub (VPH) are documented here.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).

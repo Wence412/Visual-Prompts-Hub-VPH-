@@ -1,186 +1,68 @@
-# 🎨 Visual Prompts Hub (VPH)
+# Visual Prompts Hub (VPH)
 
-> A production-grade Visual Prompt System (VPS) for ChatGPT Image 2.0 and cross-engine image generation. Turn prompts into repeatable, brand-safe visual pipelines.
+By WenceStudio by SmartDesign.
+
+Eight visual prompt examples and four planning templates for product photography, fashion, portraits, architecture, abstract textures, and brand imagery.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Maintained](https://img.shields.io/badge/maintained-yes-green.svg)]()
-[![Prompt Schema](https://img.shields.io/badge/schema-APAE%20v1-blue.svg)](prompt_system/apae_spec.md)
+[![Validate prompts](https://github.com/Wence412/Visual-Prompts-Hub-VPH-/actions/workflows/validate-prompts.yml/badge.svg)](https://github.com/Wence412/Visual-Prompts-Hub-VPH-/actions/workflows/validate-prompts.yml)
 
----
+## Start here
 
-## What This Is
+1. Open a prompt from the table below, or copy [prompt_template.yaml](prompt_template.yaml).
+2. Describe Appearance, Place, Action, and Emotion (APAE). Add your references, framing, and lighting.
+3. Copy the prompt text into your image tool. Translate the planning fields into controls supported by that tool.
+4. Review the result against the brief before publishing. Change one variable at a time when comparing variants.
 
-VPH is a structured, engine-agnostic prompt library built on the **APAE architecture** (Appearance, Place, Action, Emotion). It is not a collection of one-off prompts. It is a repeatable system for producing consistent, brand-safe visual outputs across ChatGPT Image 2.0, Midjourney, DALL-E 3, Stable Diffusion, Firefly, and Ideogram.
+These are editable examples, not verified production outputs. This repository does not run image generation, enforce brand safety, or guarantee matching results across engines. Structural validation checks files, not images.
 
-Every prompt in this repo is a structured YAML file. Every file follows the same schema. Every category has variants. The system is designed to scale.
+## Choose an example
 
----
-
-## Core Architecture
-
-### APAE Framework
-
-| Layer | Purpose | Example |
+| Example | Category | File |
 |---|---|---|
-| **Appearance** | Subject, materials, finish, color | `matte black titanium smartwatch, sapphire glass` |
-| **Place** | Environment, backdrop, set | `neon-lit concrete studio` |
-| **Action** | Pose, motion, arrangement | `floating at 30-degree angle, slight rotation` |
-| **Emotion** | Mood, brand feeling | `premium, minimal, futuristic` |
+| Premium studio watch | Products | [Watch](watch_dark_studio_premium.yaml) |
+| Sculptural gold jewelry | Products | [Jewelry](jewelry_gold_editorial.yaml) |
+| Minimal luxury shoe | Products | [Shoe](shoe_luxury_minimal.yaml) |
+| Contrast jacket editorial | Fashion | [Jacket](jacket_editorial_contrast.yaml) |
+| Dark editorial character | Portraits | [Character](editorial_character_dark.yaml) |
+| Brutalist facade at dusk | Architecture | [Facade](facade_brutalist_dusk.yaml) |
+| Charcoal and gold texture | Abstract | [Texture](texture_charcoal_gold.yaml) |
+| Tech product hero | Branding | [Tech hero](hero_shot_tech_product.yaml) |
 
-### BMB Background System
+## Build a brief
 
-| Type | Use Case |
+| APAE field | What to specify |
 |---|---|
-| `practical` | Plinths, pedestals, product stands |
-| `gradient` | Clean product shots, studio gradient |
-| `clean` | White seamless |
-| `cinematic` | Textured backdrops, mood lighting |
-| `environment` | Real-world: stone arcade, mountain terrain |
-| `practical_with_props` | Lifestyle context with minimal props |
+| Appearance | Subject, materials, color, finish, and details that must remain consistent |
+| Place | Environment, backdrop, surfaces, and light sources |
+| Action | Pose, arrangement, viewpoint, and framing |
+| Emotion | Intended mood and visual tone |
 
----
+The BMB background labels describe sets: `practical`, `gradient`, `clean`, `cinematic`, `environment`, and `practical_with_props`. They are planning labels, not API values.
 
-## Repo Structure
+## Templates and guides
 
-```
-visual-prompts-hub/
-│
-├── .github/
-│   ├── workflows/
-│   │   └── validate-prompts.yml       # CI: schema validation on PRs
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── new-prompt-pack.md
-│   │   └── bug-report.md
-│   └── pull_request_template.md
-│
-├── prompt_system/
-│   ├── apae_spec.md                   # Core APAE architecture spec
-│   ├── bmb_backgrounds.md             # Background system reference
-│   ├── prompt_schema.md               # YAML schema definition
-│   └── engine_notes.md                # Engine-specific tips and overrides
-│
-├── prompt_library/
-│   ├── products/
-│   │   └── wearable_pack/             # Luxury wearables: watches, jewelry
-│   ├── fashion/                       # Editorial fashion and apparel
-│   ├── portraits/                     # Character and portrait prompts
-│   ├── architecture/                  # Architectural and spatial prompts
-│   ├── abstract/                      # Abstract, texture, and pattern prompts
-│   └── branding/                      # Brand identity and product hero shots
-│
-├── templates/
-│   ├── prompt_template.yaml           # Blank APAE prompt template
-│   ├── batch_template.yaml            # Multi-prompt batch file template
-│   ├── brand_pack_template.yaml       # Full brand visual suite template
-│   └── campaign_template.yaml         # Campaign-level prompt set template
-│
-├── variants/
-│   ├── variants.yaml                  # Variant system reference
-│   └── variant_strategies.md          # How to build systematic variants
-│
-├── examples/
-│   └── wearable_hero_example.md       # Annotated end-to-end example
-│
-├── engines/
-│   └── engine_comparison.md           # Cross-engine behavior notes
-│
-├── docs/
-│   ├── getting_started.md
-│   ├── advanced_prompting.md
-│   └── brand_safe_guidelines.md
-│
-├── README.md
-├── CONTRIBUTING.md
-├── CHANGELOG.md
-└── LICENSE
-```
+- [Single prompt](prompt_template.yaml), [batch](batch_template.yaml), [brand pack](brand_pack_template.yaml), and [campaign](campaign_template.yaml)
+- [Getting started](getting_started.md) and [annotated watch example](wearable_hero_example.md)
+- [Schema and field meanings](prompt_schema.md)
+- [Engine adaptation](engine_comparison.md) and [prompt-writing notes](engine_notes.md)
+- [Variant strategies](variant_strategies.md) and [brand review](brand_safe_guidelines.md)
 
----
+The YAML key `chatgpt_image_2` is retained for compatibility with existing imports. It is a VPH label, not an API model ID. Fields such as `style_preset`, `ar`, and `quality: hd` express creative intent. Do not send this YAML directly to an API. Check the selected model and interface before mapping settings.
 
-## Quick Start
+For a searchable collection, open [Prompt Packs Library](https://wence412.github.io/Prompt-Packs-library/image/). VPH source edits do not automatically update its imported copy.
 
-**1. Choose a template**
+## Validate and contribute
 
 ```bash
-# Copy the base template
-cp templates/prompt_template.yaml my_prompt.yaml
+python -m pip install -r requirements-dev.txt
+python scripts/validate_prompts.py
 ```
 
-**2. Fill APAE fields**
+The validator checks all root YAML files, requires eight or more complete examples, and checks APAE fields, engine prompt blocks, variant IDs, and MIT licensing. The four intentionally incomplete templates receive structural checks separately. It does not call image services.
 
-```yaml
-title: "My Product — Dark Studio"
-apae:
-  appearance: "brushed aluminum espresso machine, industrial finish"
-  place: "dark concrete studio, single spotlight"
-  action: "centered, slightly angled left"
-  emotion: "artisan, serious, premium"
-```
-
-**3. Add your engine prompt**
-
-```yaml
-chatgpt_image_2:
-  prompt: >
-    Brushed aluminum espresso machine, centered and angled left,
-    dark concrete studio with a single spotlight above,
-    artisan mood, dramatic shadows, product photography
-  style_preset: "product_photo"
-  background: "cinematic"
-negatives: [logos, text, watermark, people, hands]
-```
-
-**4. Run in your engine of choice.** See `engines/engine_comparison.md` for engine-specific tips.
-
-**5. Add variants.** See `variants/variant_strategies.md` to generate systematic color, lighting, and mood variants.
-
----
-
-## Featured Prompt Packs
-
-| Pack | Category | Prompts | Status |
-|---|---|---|---|
-| [Luxury Wearables](prompt_library/products/wearable_pack/) | Products | 6 | ✅ Active |
-| [Editorial Fashion](prompt_library/fashion/) | Fashion | 8 | ✅ Active |
-| [Brand Hero Shots](prompt_library/branding/) | Branding | 5 | ✅ Active |
-| [Architectural Forms](prompt_library/architecture/) | Architecture | 4 | ✅ Active |
-| [Abstract Textures](prompt_library/abstract/) | Abstract | 4 | ✅ Active |
-| [Portraits — Editorial](prompt_library/portraits/) | Portraits | 4 | ✅ Active |
-
----
-
-## Supported Engines
-
-| Engine | Support Level | Notes |
-|---|---|---|
-| ChatGPT Image 2.0 | ✅ Primary | Native `style_preset` support |
-| Midjourney v6+ | ✅ Full | Use `--ar`, `--style raw` flags |
-| DALL-E 3 | ✅ Full | Verbatim prompt support |
-| Stable Diffusion XL | ✅ Full | Add CFG scale notes in variants |
-| Adobe Firefly | ⚡ Partial | Style reference via `mood` field |
-| Ideogram | ⚡ Partial | Strong text rendering support |
-
-See `engines/engine_comparison.md` for detailed adaptation notes.
-
----
-
-## Contributing
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting. Every prompt must follow the APAE schema. PRs without a valid YAML file will not be merged.
-
----
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for version history.
-
----
+Read [CONTRIBUTING.md](CONTRIBUTING.md), then open a pull request. Report problems through [Issues](https://github.com/Wence412/Visual-Prompts-Hub-VPH-/issues).
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
-
----
-
-*Built [WenceStudio by SmartDesign](https://github.com/Wence412). Prompt systems that scale.*
+[MIT](LICENSE). Review rights to any supplied references, trademarks, likenesses, and generated assets separately.

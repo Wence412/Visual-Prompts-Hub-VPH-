@@ -1,3 +1,4 @@
+# VPH planning metadata, not an API request. See prompt_schema.md.
 title: "Premium Tech Device — Dark Editorial — Brand Hero"
 version: "1.0.0"
 category: branding
@@ -54,7 +55,7 @@ negatives:
 variants:
   - id: v1
     label: "White Clean Launch"
-    change: "White seamless backdrop. Soft overhead diffusion. Clinical, Apple-style clean product shot."
+    change: "White seamless backdrop. Soft overhead diffusion. Precise, minimal product shot with generous negative space."
     background: clean
 
   - id: v2

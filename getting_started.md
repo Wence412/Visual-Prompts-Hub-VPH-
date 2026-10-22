@@ -1,13 +1,13 @@
 # Getting Started with VPH
 
-This guide takes you from zero to your first production-ready prompt in under 10 minutes.
+This guide takes you from zero to your first production-ready prompt using the included examples.
 
 ---
 
 ## Prerequisites
 
 - A text editor that supports YAML syntax highlighting (VS Code recommended)
-- Access to at least one supported image engine (ChatGPT Image 2.0, Midjourney, DALL-E 3)
+- Access to at least one supported image engine (your selected image tool, Midjourney, DALL-E 3)
 - Basic familiarity with YAML format (key: value pairs, indentation matters)
 
 ---
@@ -23,7 +23,7 @@ Before writing a single prompt, understand the four-layer APAE framework. Every 
 | Action | What is it doing? | `floating at 30-degree angle, slight rotation` |
 | Emotion | What should the viewer feel? | `premium, futuristic, precise` |
 
-If any one of these four layers is vague, the output will be inconsistent. Specificity is the only lever you have.
+If any one of these four layers is vague, the output will be inconsistent. References, tool settings, and review also affect the result.
 
 ---
 
@@ -32,7 +32,7 @@ If any one of these four layers is vague, the output will be inconsistent. Speci
 Start from a template, not a blank file.
 
 ```bash
-cp templates/prompt_template.yaml my_first_prompt.yaml
+cp prompt_template.yaml my_first_prompt.yaml
 ```
 
 Open `my_first_prompt.yaml` in your editor.
@@ -46,7 +46,7 @@ Fields marked `[REQUIRED]` must be completed before running any prompt. Do not s
 **Minimum viable prompt:**
 
 ```yaml
-title: "Leather Wallet — Dark Oak Surface — Premium"
+title: "Leather Wallet , Dark Oak Surface , Premium"
 version: "1.0.0"
 category: products
 engine_primary: chatgpt_image_2
@@ -90,9 +90,11 @@ variants:
 
 ## Step 4: Run the Prompt
 
-Copy the `chatgpt_image_2.prompt` field text and paste it into ChatGPT Image 2.0 (or your chosen engine).
+Copy the `chatgpt_image_2.prompt` field text and paste it into your selected image tool (or your chosen engine).
 
-For other engines, use the guidance in `engines/engine_comparison.md` to adapt the prompt format.
+The YAML fields are planning metadata, not API parameters. See [field meanings](prompt_schema.md).
+
+For other engines, use the guidance in `engine_comparison.md` to adapt the prompt format.
 
 ---
 
@@ -112,7 +114,7 @@ If any answer is no: refine the specific APAE field that failed and re-run.
 
 ## Step 6: Add Variants
 
-Once the base prompt works, run your variants. See `variants/variant_strategies.md` for the four main strategies.
+Once the base prompt works, run your variants. See `variant_strategies.md` for the four main strategies.
 
 ---
 
@@ -129,5 +131,5 @@ If your prompt is polished and schema-compliant, consider submitting it to the l
 | Vague appearance field | Name the material, finish, color, and key visual detail explicitly |
 | Generic emotion | Replace "nice, modern" with specific brand feelings: "architectural, precise, cold authority" |
 | Missing negatives | Always include at minimum: logos, text, watermark |
-| No variants | Every production prompt needs at least 2. One variant protects against a single-engine failure. |
-| Copying the ChatGPT prompt directly to MJ | Adapt using `engines/engine_comparison.md`. Different engines have different prompt grammars. |
+| No variants | Every production prompt needs at least 2. Variants provide alternative directions; they do not guarantee a successful output. |
+| Copying the ChatGPT prompt directly to MJ | Adapt using `engine_comparison.md`. Different engines have different prompt grammars. |

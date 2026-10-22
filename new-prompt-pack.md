@@ -1,7 +1,7 @@
 ---
 name: New Prompt Pack
 about: Propose a new prompt pack for the VPH library
-title: "[PACK] Category — Theme"
+title: "[PACK] Category , Theme"
 labels: prompt-pack, enhancement
 assignees: ''
 ---
@@ -9,7 +9,7 @@ assignees: ''
 ## Pack Summary
 
 **Category:** products | fashion | portraits | architecture | abstract | branding
-**Theme / Subject:** (e.g. "Luxury leather goods — dark studio editorial")
+**Theme / Subject:** (e.g. "Luxury leather goods , dark studio editorial")
 **Number of prompts planned:** (minimum 4)
 **Primary engine:** chatgpt_image_2 | midjourney | dalle3 | sdxl
 
@@ -45,7 +45,7 @@ List at least 2 planned variants (lighting, background, color, or format):
 ## Checklist Before Submitting
 
 - [ ] I have read `CONTRIBUTING.md`
-- [ ] I have read `prompt_system/prompt_schema.md`
+- [ ] I have read `prompt_schema.md`
 - [ ] My prompts will follow the APAE schema
 - [ ] My prompts will have no copyrighted IP, real people, or visible logos
 - [ ] I will include at least 2 variants per prompt
