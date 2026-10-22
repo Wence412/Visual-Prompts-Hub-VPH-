@@ -14,7 +14,7 @@ Eight visual prompt examples and four planning templates for product photography
 3. Copy the prompt text into your image tool. Translate the planning fields into controls supported by that tool.
 4. Review the result against the brief before publishing. Change one variable at a time when comparing variants.
 
-These are editable examples, not verified production outputs. This repository does not run image generation, enforce brand safety, or guarantee matching results across engines. Structural validation checks files, not images.
+These are editable examples. [View the tested visuals and review notes](tested/README.md). They are not verified production outputs. This repository does not run image generation, enforce brand safety, or guarantee matching results across engines. Structural validation checks files, not images.
 
 ## Choose an example
 
@@ -22,7 +22,7 @@ These are editable examples, not verified production outputs. This repository do
 |---|---|---|
 | Premium studio watch | Products | [Watch](watch_dark_studio_premium.yaml) |
 | Sculptural gold jewelry | Products | [Jewelry](jewelry_gold_editorial.yaml) |
-| Minimal luxury shoe | Products | [Shoe](shoe_luxury_minimal.yaml) |
+| Minimal luxury shoe | Fashion | [Shoe](shoe_luxury_minimal.yaml) |
 | Contrast jacket editorial | Fashion | [Jacket](jacket_editorial_contrast.yaml) |
 | Dark editorial character | Portraits | [Character](editorial_character_dark.yaml) |
 | Brutalist facade at dusk | Architecture | [Facade](facade_brutalist_dusk.yaml) |

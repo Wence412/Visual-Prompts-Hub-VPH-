@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-22. Visual tests and prompt revisions
+
+- Added thirteen reviewed image runs: eight initial tests and five retests.
+- Revised portrait lighting, facade illumination, earbud lid geometry, paper texture, and watch clasp instructions.
+- Added exact prompt snapshots, dimensions, hashes, and per-image caveats under tested/.
+
 ## 2026-10-22. Repository repair
 
 - Replaced the proposed directory map and unavailable pack counts with links to eight actual examples and four templates.
