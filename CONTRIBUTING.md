@@ -58,7 +58,7 @@ authors:                       # Optional but encouraged.
   - name: string
     github: string
 
-license: MIT                   # Required. Must be MIT for inclusion in main repo.
+license: WenceStudio Library License 1.0   # Required. Contributions are licensed to WenceStudio by SmartDesign under LICENSE.
 ```
 
 ---

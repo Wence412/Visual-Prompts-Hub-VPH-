@@ -33,7 +33,7 @@ def validate(data, name):
             errors.append(message)
     if not isinstance(data, dict):
         return ["file must be a mapping"]
-    check(data.get("license") == "MIT", "license must be MIT")
+    check(data.get("license") == "WenceStudio Library License 1.0", "license must be WenceStudio Library License 1.0")
     if name in TEMPLATES:
         if name == "prompt_template.yaml":
             check(isinstance(data.get("apae"), dict) and all(k in data["apae"] for k in APAE), "template needs four APAE fields")
