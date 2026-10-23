@@ -72,4 +72,4 @@ campaign:
     - label: "Seasonal"
       change: "Add seasonal environmental context (snow / summer heat / autumn leaves)."
 
-license: MIT
+license: WenceStudio Library License 1.0

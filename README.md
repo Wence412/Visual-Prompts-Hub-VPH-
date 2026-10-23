@@ -4,7 +4,7 @@ By WenceStudio by SmartDesign.
 
 Eight visual prompt examples and four planning templates for product photography, fashion, portraits, architecture, abstract textures, and brand imagery.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: WenceStudio Library License](https://img.shields.io/badge/License-All%20rights%20reserved-lightgrey.svg)](LICENSE)
 [![Validate prompts](https://github.com/Wence412/Visual-Prompts-Hub-VPH-/actions/workflows/validate-prompts.yml/badge.svg)](https://github.com/Wence412/Visual-Prompts-Hub-VPH-/actions/workflows/validate-prompts.yml)
 
 ## Start here
@@ -59,10 +59,10 @@ python -m pip install -r requirements-dev.txt
 python scripts/validate_prompts.py
 ```
 
-The validator checks all root YAML files, requires eight or more complete examples, and checks APAE fields, engine prompt blocks, variant IDs, and MIT licensing. The four intentionally incomplete templates receive structural checks separately. It does not call image services.
+The validator checks all root YAML files, requires eight or more complete examples, and checks APAE fields, engine prompt blocks, variant IDs, and the license field. The four intentionally incomplete templates receive structural checks separately. It does not call image services.
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md), then open a pull request. Report problems through [Issues](https://github.com/Wence412/Visual-Prompts-Hub-VPH-/issues).
 
 ## License
 
-[MIT](LICENSE). Review rights to any supplied references, trademarks, likenesses, and generated assets separately.
+[WenceStudio Visual Prompts Hub License](LICENSE) © 2026 WenceStudio by SmartDesign. Free to use in your own work, including client work. Do not republish, resell, mirror, or bulk-collect the prompts. Copies obtained before 23 October 2026 were released under the MIT License, and that earlier grant is not revoked. Review rights to any supplied references, trademarks, likenesses, and generated assets separately. Questions: hello@wencestudio.com.

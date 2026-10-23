@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-23. License change
+
+- Replaced the MIT License with the WenceStudio Visual Prompts Hub License, Version 1.0, for this and later versions.
+- Copies obtained before 23 October 2026 stay under MIT. That earlier grant is not revoked.
+- Root YAML files now carry `license: WenceStudio Library License 1.0`. The validator and CONTRIBUTING.md match.
+- The archived files under tested/ are unchanged historical snapshots and still show their original license field.
+
 ## 2026-10-22. Visual tests and prompt revisions
 
 - Added thirteen reviewed image runs: eight initial tests and five retests.
